@@ -1,4 +1,4 @@
-name: Build and run RoomBook
+name: Build and verify Sort Visualizer
 on: [push, workflow_dispatch]
 jobs:
   build:
@@ -10,4 +10,4 @@ jobs:
           distribution: temurin
           java-version: '17'
       - run: mvn --batch-mode clean package
-      - run: java -jar target/roombook-0.1.0.jar
+      - run: java -jar target/sort-visualizer-1.0.0.jar --self-test
